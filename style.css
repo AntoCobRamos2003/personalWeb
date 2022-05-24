@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: black;
+}
+/* ::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 0, 0, 0.651);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.644);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-button {
+} */
+#home {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+#containerInfo {
+  width: 35%;
+  height: fit-content;
+  line-height: 2rem;
+  position: absolute;
+  left: 10%;
+  cursor: default;
+  animation: info 1s ease-in;
+}
+@keyframes info {
+  from {
+    left: -400px;
+  }
+  to {
+    left: 10%;
+  }
+}
+#containerInfo p a {
+  text-decoration: none;
+  color: rgb(116, 116, 116);
+}
+.anthony {
+  line-height: 2em;
+  font-size: 40px;
+}
+.anthony::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 2.5px;
+  margin-left: 10px;
+  margin-bottom: 7px;
+  background: red;
+}
+#splitter {
+  width: 2px;
+  height: 500px;
+  background-color: red;
+  animation: split 1s ease-in;
+}
+@keyframes split {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 500px;
+    opacity: 1;
+  }
+}
+#card {
+  width: 30%;
+  height: 270px;
+  background-color: red;
+  position: absolute;
+  border-radius: 20px;
+  right: 12.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 10px #ff000065;
+}
+
+#contInfo {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  padding: 5px;
+  line-height: 3em;
+  font-size: 12px;
+  color: #ffffffbd;
+}
+#contInfo ul li {
+  display: flex;
+}
+#contInfo i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.imgback {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  justify-content: center;
+  display: flex;
+}
+.imgback .circle {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+}
+/* #sh {
+  width: 25px;
+  height: 25px;
+  top: 5px;
+  right: 50%;
+  box-shadow: 0px 0px 26px 5px #000000;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #000000;
+} */
+.imgback .c3 {
+  width: 190px;
+  height: 190px;
+  right: 5px;
+  top: 40px;
+  background: none;
+  z-index: 10;
+  border: 5px solid rgba(0, 0, 0, 0.712);
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ffffffa9;
+}
+#imgCon {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+#img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  bottom: -10px;
+  right: 11px;
+  z-index: -100;
+}
+#social {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 10px;
+  right: 25px;
+  width: fit-content;
+  font-size: 25px;
+  line-height: 2.2rem;
+  z-index: 100;
+}
+#social a {
+  color: red;
+}
+#nav {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+#nav ul {
+  list-style-type: none;
+  font-size: 25px;
+}
+#nav ul li {
+  cursor: pointer;
+  height: fit-content;
+  margin-top: 35px;
+}
+#nav ul li a {
+  width: fit-content;
+  text-decoration: none;
+  color: red;
+}
+#nav ul li span {
+  color: white;
+  margin-left: 10px;
+  display: none;
+}
+#nav ul li a i:hover + span {
+  display: inline-block;
+  animation: icon 0.5s ease-in;
+}
+@keyframes icon {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#projects {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+/* #ill {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  transform: rotateY(180deg);
+  position: absolute;
+  bottom: -101%;
+  left: -35px;
+} */
+.proTitle {
+  position: absolute;
+  top: 2%;
+  font-size: 27px;
+}
+.proTitle::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 5px;
+  margin-left: 10px;
+  margin-bottom: 6px;
+  background: red;
+}
+#proCardsCon {
+  width: 90%;
+  height: 500px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+  position: absolute;
+}
+.proCard {
+  width: 100%;
+  height: 100%;
+  background: black;
+  border-radius: 20px;
+  border: 2px solid red;
+  outline: 2px solid red;
+  outline-offset: -10px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+
+#GuessTheWord img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  transition: 0.75s;
+  z-index: -1;
+  transform: scale(1.2);
+  top: 50px;
+  left: 10px;
+}
+#GuessTheWord:hover img {
+  transform: scale(1.4);
+}
+#GuessTheWord h2 {
+  z-index: 10;
+}
+.proCard button {
+  position: absolute;
+  top: 75%;
+  left: 40%;
+  width: 50px;
+  height: 30px;
+  background: red;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 5px 20px 3px #000000;
+}
+.proCard button a {
+  text-decoration: none;
+  color: black;
+}
+#volume {
+  width: fit-content;
+  position: fixed;
+  display: flex;
+  bottom: 15px;
+  left: 15px;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: red;
+  cursor: pointer;
+}
+.unmute {
+  display: none;
+}
+.mute {
+  display: none;
+}
+.active {
+  display: block;
+}
+@media only screen and (max-width: 600px) {
+  #containerInfo {
+    width: 90%;
+    top: 10%;
+    left: 15px;
+    line-height: 2rem;
+    font-size: 11px;
+  }
+  .anthony {
+    line-height: 1em;
+    margin-bottom: 15px;
+  }
+  #splitter {
+    width: 85%;
+    height: 1px;
+  }
+  @keyframes split {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 85%;
+      opacity: 1;
+    }
+  }
+  #card {
+    width: 60%;
+    height: 190px;
+    right: auto;
+    bottom: 10%;
+    transform: scale();
+  }
+  #contInfo {
+    top: 15px;
+    line-height: 2.5em;
+  }
+  .imgback .c3 {
+    max-width: 120px;
+    max-height: 120px;
+    right: 5px;
+    top: 45px;
+    transform: scale(1);
+  }
+  #img {
+    right: 5%;
+  }
+  #social {
+    bottom: 1%;
+    right: 2%;
+  }
+  #nav {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    top: 2px;
+  }
+  #nav ul li {
+    margin-top: 25px;
+  }
+  #nav ul li a i:hover + span {
+    display: none;
+  }
+  /*projects*/
+  #proCardsCon {
+    width: 80%;
+    height: 500px;
+    grid-template-columns: 1fr;
+  }
+  .proCard {
+    height: 400px;
+  }
+  #volume {
+    bottom: 5px;
+    left: 5px;
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .imgback .c3 {
+    transform: scale(0.8);
+  }
+}
+@media only screen and (max-width: 450px) {
+  #card {
+    width: 70%;
+  }
+  .imgback .c3 {
+    display: none;
+  }
+}
