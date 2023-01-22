@@ -14,6 +14,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <section id="home">
@@ -36,7 +37,7 @@
         </ul>
       </nav>
 
-      <div id="containerInfo">
+      <div id="containerInfo" >
         <h1>Hey There, It's Me</h1>
         <h1 class="anthony">Anthony</h1>
         <p>
@@ -45,12 +46,14 @@
             >Free Code Camp</a
           >
         </p>
-        <p>I will start to study Computer Science this year at CJC</p>
+        <p>I am studying Computer Science at  <a href="http://www.cjc.edu.bz/" target="_blank"
+          >CJC</a
+        ></p>
         <p>I would love to work at a top-tech company one day</p>
         <p>I have always loved computers</p>
       </div>
       <div id="splitter"></div>
-      <div id="card">
+      <div id="card" data-aos="fade-left" data-aos-delay="500">
         <div id="contInfo">
           <!--
               <p><span><i class="bi bi-geo-alt"></i></span> Corozal, Belize</p>
@@ -80,7 +83,7 @@
         <div class="imgback">
           <div class="circle c3">
             <div id="imgCon">
-              <img src="mee.png" ondragstart="return false" alt="me" id="img" />
+              <img src="mee.jpg" ondragstart="return false" alt="me" id="img" />
             </div>
           </div>
         </div>
@@ -113,7 +116,7 @@
  -->
       <h1 class="proTitle">Projects</h1>
       <div id="proCardsCon">
-        <div class="proCard" id="GuessTheWord">
+        <div class="proCard" data-aos="fade-down" id="GuessTheWord">
           <img src="guess.png" alt="" srcset="" />
           <h2>Guess The Word</h2>
           <button>
@@ -124,29 +127,29 @@
             >
           </button>
         </div>
-        <div class="proCard">
+        <div class="proCard" data-aos="fade-up">
           <h2>Coming Soon</h2>
           <!--           <button>Play</button>
  -->
         </div>
-        <div class="proCard">
+        <div class="proCard" data-aos="fade-down">
           <h2>Coming Soon</h2>
           <!--           <button>Play</button>
  -->
         </div>
-        <div class="proCard">
+        <div class="proCard" data-aos="fade-up">
           <h2>Coming Soon</h2>
           <!--           <button>Play</button>
  -->
         </div>
       </div>
     </section>
-    <audio src="chill.mp3" id="track" loop="loop"></audio>
 
     <div id="volume">
       <i class="bi bi-volume-up-fill unmute"></i>
       <i class="bi bi-volume-mute-fill active mute"></i>
     </div>
   </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </html>
